@@ -1,0 +1,128 @@
+body {
+  width: 400px;
+  min-height: 250px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 16px;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.language-selector select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+.language-selector select:focus {
+  border-color: #4d90fe;
+  outline: none;
+}
+
+.arrow {
+  color: #999;
+  font-size: 18px;
+}
+
+#inputText {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+#inputText:focus {
+  border-color: #4d90fe;
+  outline: none;
+}
+
+#resultContainer {
+  padding: 12px;
+  background-color: #2d2d2d;
+  border-radius: 4px;
+  min-height: 50px;
+  border: 1px solid #444;
+}
+
+#detectedLang {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+#translatedText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e0e0e0;
+  word-wrap: break-word;
+}
+
+.alternatives {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #444;
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Support for Bangla text */
+#inputText, #translatedText {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif;
+}
+
+/* Loading animation */
+#translatedText:has-text("Translating...") {
+  color: #999;
+  font-style: italic;
+}
+
+/* Button styles for dark mode */
+button {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+button:hover {
+  background-color: #3d3d3d;
+}
+
+/* Scrollbar styling for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
